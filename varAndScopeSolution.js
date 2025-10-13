@@ -3,7 +3,7 @@ var message = "hello world!"; // global message
 
 function greetingFunction(saySomethingElse) {
   // Function scope
-  var message = "hi"; // function-level message
+  var message = "hi !"; // function-level message
   console.log(message);
 
   if (saySomethingElse) {
@@ -24,3 +24,4 @@ if (true) {
 
 // DO NOT change this line
 console.log(message);       // Should return "goodbye!"
+
