@@ -1,5 +1,5 @@
 let counter = function (increment) {
-  let count = 0; // keep each counter independent
+  let count = 0; // independent count for each closure
 
   return function () {
     count += increment;
@@ -7,12 +7,10 @@ let counter = function (increment) {
   };
 };
 
-// each counter must start from 0 and work independently
 let countByTwo = counter(2);
 let countByOne = counter(1);
 
-// assignment’s expected call orde
-console.log(countByOne()); // Expected: 1
 console.log(countByTwo()); // Expected: 2
+console.log(countByOne()); // Expected: 1
 console.log(countByTwo()); // Expected: 4
-console.log(countByTwo()); // Expected: 6
+console.log(countByOne()); // Expected: 2
