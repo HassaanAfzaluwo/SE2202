@@ -13,7 +13,6 @@ function greetingFunction(saySomethingElse) {
   }
 }
 
-// DO NOT change the next 3 lines
 greetingFunction();         // Should return "hi"
 greetingFunction(true);     // Should return "hi" and "hello!"
 console.log(message);       // Should return "hello world!"
@@ -22,6 +21,6 @@ if (true) {
   var message = "goodbye!"; // redefines global message because var ignores block scope
 }
 
-// DO NOT change this line
 console.log(message);       // Should return "goodbye!"
+
 
