@@ -1,19 +1,16 @@
 let counter = function (increment) {
-  // Each counter must have its own count
-  let count = 0;
+  let count = 0; // independent count for each closure
 
-  // Return a function that increments and returns count
   return function () {
     count += increment;
     return count;
   };
 };
 
-let countByTwo = counter(2); // closure that adds 2
-let countByOne = counter(1); // closure that adds 1
+let countByTwo = counter(2);
+let countByOne = counter(1);
 
-// DO NOT change the lines below
-console.log(countByTwo()); // 2
-console.log(countByTwo()); // 4
-console.log(countByTwo()); // 6
-console.log(countByOne()); // 1
+console.log(countByTwo()); // Expected: 2
+console.log(countByOne()); // Expected: 1
+console.log(countByTwo()); // Expected: 4
+console.log(countByOne()); // Expected: 2
